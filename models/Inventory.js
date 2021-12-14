@@ -5,5 +5,14 @@ const InventorySchema = new mongoose.Schema({
         type:String,
         require: true
     },
-    
-})
+    price:{
+        type: Number,
+        required:true
+    },
+    inventory_amount:{
+        type: Number,
+        required:true
+    }
+});
+
+module.exports = Inventory = mongoose.model('inventory', InventorySchema);
