@@ -1,4 +1,4 @@
-import react, { Component } from 'react';
+import React, { Component } from "react";
 
 class Registerpage extends Component {
     constructor(props) {
@@ -13,6 +13,20 @@ class Registerpage extends Component {
         }
     }
 
+    onChangeEmail(e){
+      this.setState({
+        email: e.target.value
+      });
+    }
+
+    onChangePassword(e){
+      this.setState({
+        password: e.target.value
+      });
+    }
+
+    //Need a On button here
+
     render() {
         return (
             <div className="container">
@@ -20,33 +34,33 @@ class Registerpage extends Component {
                     <div className="col-md-8 m-auto pb-5">
                         <form noValidate onSubmit={this.onSubmit}>
                             <div className="form-group">
-                                <label for="Email">email</label>
+                                <label for="Email">Email</label>
                                 <input
                                     type="text"
                                     placeholder="email"
                                     name="email"
                                     className="form-control"
-                                    value={this.state.title}
-                                    onChange={this.onChangeTitle}
-                                    id="email"
+                                    value={this.state.email}
+                                    onChange={this.onChangeEmail}
+                                    id="registerEmail"
                                 />
                             </div>
 
                             <div className="form-group">
-                                <label for="password">password</label>
+                                <label for="password">Password</label>
                                 <input
                                     type="text"
                                     placeholder="password"
                                     name="password"
                                     className="form-control"
-                                    value={this.state.authors}
-                                    onChange={this.onChangeAuthor}
-                                    id="articleAuthors"
+                                    value={this.state.password}
+                                    onChange={this.onChangePassword}
+                                    id="registerPassword"
                                 />
                             </div>
 
                             <input data-testid="Register"
-                                type="Register"
+                                type="submit"
                                 className="btn btn-outline-warning btn-block mt-4 pb-2"
                             />
                         </form>
