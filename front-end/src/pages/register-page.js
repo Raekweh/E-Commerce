@@ -36,7 +36,7 @@ class Registerpage extends Component {
                             <div className="form-group">
                                 <label for="Email">Email</label>
                                 <input
-                                    type="text"
+                                    type="email"
                                     placeholder="email"
                                     name="email"
                                     className="form-control"
@@ -49,7 +49,7 @@ class Registerpage extends Component {
                             <div className="form-group">
                                 <label for="password">Password</label>
                                 <input
-                                    type="text"
+                                    type="password"
                                     placeholder="password"
                                     name="password"
                                     className="form-control"
