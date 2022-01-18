@@ -9,7 +9,7 @@ class Registerpage extends Component{
                 <h1>Register account</h1>
                 <Registerform/>
             </div>
-        )
+        );
     }
 }
 

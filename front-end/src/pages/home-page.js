@@ -1,14 +1,15 @@
 import { Component } from "react";
 
-class HomePage extends Component
-{
+class HomePage extends Component{
     render()
+
     {
-        return(
+        return (
             <div>
-                <h2>Welcome to our E-Commerce website</h2>
+                <h1>Home page</h1>
+                <p>The home page will temporarily be text only</p>
             </div>
-        )
+        );
     }
 }
 

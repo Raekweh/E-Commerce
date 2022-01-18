@@ -1,17 +1,22 @@
 import './App.css';
 import { Component } from 'react';
+import { BrowserRouter as Route, Router } from 'react-router-dom';
+
+import NavBar from './pages/navigation-bar';
+import Header from './pages/Header';
 
 import Registerpage from './pages/register-page';
 import HomePage from './pages/home-page';
-import { Route } from 'react-router-dom';
 
 class App extends Component {
   render() {
     return (
-      <Route>
-        <Route exact path ="/" component = {HomePage}/>
+      <Router>
+        <Header/>
+        <NavBar/>
+        <Route exact path = "/" component = {HomePage} />
         <Route path = "/register-page" component = {Registerpage}/>
-      </Route>
+      </Router>
     );
   }
 }
